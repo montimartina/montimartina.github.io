@@ -172,7 +172,7 @@ h6 {
   }
 
   .header~main .hero {
-    margin-left: -160px;
+    margin-left: 160px;
     width: 100vw;
   }
 }
