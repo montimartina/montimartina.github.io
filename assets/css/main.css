@@ -605,9 +605,10 @@ section,
 --------------------------------------------------------------*/
 .about .content h2 {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 28px;
   color: #0563bb;
 }
+
 .about .content h3 {
   font-weight: 700;
   font-size: 16px;
