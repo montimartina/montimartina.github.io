@@ -1,8 +1,8 @@
-#Personal Porfofoglio.
+# Personal Porfofoglio.
 
-##This is a template downloading from bootstrap, which I changed alittle due to personal taste.
+## This is a template downloading from bootstrap, which I changed alittle due to personal taste.
 
-##DEMO: https://montimartina.github.io
+# #DEMO: https://montimartina.github.io
 
 
 Template Name: MyResume
