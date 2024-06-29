@@ -1,6 +1,6 @@
 # Personal Porfofoglio.
 
-## This is a template downloading from bootstrap, which I changed alittle due to personal taste.
+## This template was originally downoloaded from bootstrap, after I changed it due to personal taste.
 
 ### DEMO: https://montimartina.github.io
 
