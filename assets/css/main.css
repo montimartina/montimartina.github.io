@@ -1469,6 +1469,36 @@ section,
   color: var(--accent-color);
 }
 
+/*-----------*/
+
+.resume-skills-cat {
+  font-size: 1rem;
+  color: #434E5E;
+}
+
+.resume-skill-name {
+  font-size: 0.8125rem;
+  color: #434E5E;
+}
+
+.badge-light {
+  color: #58677c;
+  background: #F7F8FA;
+}
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline-item {
+  display: inline-block;
+}
+
+.list-inline-item:not(:last-child) {
+  margin-right: 0.5rem;
+
+
 
 /*----------------------------------------------------------
 # Logo
