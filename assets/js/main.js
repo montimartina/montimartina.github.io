@@ -241,7 +241,7 @@ function setTheme(t) {
     if (originalSrc) {
       if (originalSrc.includes('image-12')) {
         img.src = t === 'dark' ? 'assets/img/image-1.png' : originalSrc;
-      } else if (originalSrc.includes('profile-2.jpg')) {
+      } else if (originalSrc.includes('profile.jpg')) {
         img.src = t === 'dark' ? 'assets/img/new-profile.jpg' : originalSrc;
       }
     }
