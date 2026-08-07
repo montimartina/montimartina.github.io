@@ -17,42 +17,51 @@
   --nav-font: "Poppins",  sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+
+[data-theme="dark"] {
+  --background-color: #232323;
+  --default-color: #e8e5e5;
+  --heading-color: #e8e5e5;
+  --accent-color: #20aef1;
+  --surface-color: #252525;
+  --contrast-color: #4f4f4f;
+  --nav-color: #e8e5e5;  /* The default color of the main navmenu links */
+  --nav-hover-color: #20aef1; /* Applied to main navmenu links when they are hovered over or active */
+  --panel: #231f18;
+  --text-success: #11af65;
+  --text-warning: #c29010;
+  --muted: #2facd2;
+  --border: rgba(200, 169, 110, 0.18);
+  --card-bg: #231f18;
+  --input-bg: rgba(255, 255, 255, 0.05);
+  --input-border: rgba(200, 169, 110, 0.2);
+  --nav-bg: rgba(15, 13, 10, 0.88);
+  --footer-bg: #181410;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="light"] {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #45505b; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #0563bb; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
-
-
-}
-
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
-:root {
+  --contrast-color: #efe9e9; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
   --nav-color: #45505b;  /* The default color of the main navmenu links */
   --nav-hover-color: #0563bb; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #0563bb; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --text-success: #059652;
+  --text-warning: #ffb703;
+  --muted: #216aae;
+  --border: rgba(120, 90, 40, 0.15);
+  --card-bg: #ffffff;
+  --input-bg: #f5f0e8;
+  --input-border: rgba(120, 90, 40, 0.2);
+  --nav-bg: rgba(250, 248, 245, 0.92);
+  --footer-bg: #ede8de;
+  --shadow: 0 8px 32px rgba(100, 70, 20, 0.1);
 }
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
-.light-background {
-  --background-color: #f9f9f9;
-  --surface-color: #ffffff;
-}
-
-.dark-background {
-  --background-color: #060606;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --surface-color: #252525;
-  --contrast-color: #ffffff;
-}
 
 /* Smooth scroll */
 :root {
@@ -74,6 +83,27 @@ a {
   transition: 0.3s;
 }
 
+/* Aggiungi queste classi per utilizzare i colori definiti nel :root */
+.text-primary {
+  color: var(--accent-color) !important;
+}
+
+.text-dark {
+  color: var(--default-color) !important;
+}
+.text-secondary {
+  color: var(--heading-color) !important;
+}
+
+.text-muted {
+  color: var(--muted) !important;
+}
+.text-success {
+  color: var(--text-success)  !important;
+}
+.text-warning {
+  color: var(--text-warning) !important;
+} 
 a:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
   text-decoration: none;
@@ -207,10 +237,16 @@ h6 {
 .header .profile-img img {
   margin: 15px auto;
   display: block;
-  width: 120px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
   border: 8px solid color-mix(in srgb, var(--default-color), transparent 85%);
 }
 
+.btn-outline-primary:hover{
+  color: var(--surface-color);
+  background-color: var(--accent-color);
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -391,7 +427,7 @@ h6 {
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 15px;
+  right: 5rem;
   bottom: -15px;
   z-index: 99999;
   background-color: var(--accent-color);
@@ -608,13 +644,13 @@ section,
 .about .content h2 {
   font-weight: 700;
   font-size: 28px;
-  color: #0563bb;
+  color: var(--accent-color);
 }
 
 .about .content h3 {
   font-weight: 700;
   font-size: 16px;
-  color: #0563bb;
+  color: var(--accent-color);
 }
 
 .about .content ul {
@@ -639,6 +675,11 @@ section,
   line-height: 0;
 }
 
+img.rounded-circle {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
@@ -772,6 +813,15 @@ section,
   top: 0;
   background: var(--background-color);
   border: 2px solid var(--accent-color);
+}
+
+.card {
+  background-color: var(--surface-color);
+  box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  padding: 30px;
+  text-align: center;
+  transition: 0.3s;
 }
 
 /*--------------------------------------------------------------
@@ -1481,11 +1531,14 @@ section,
   color: #434E5E;
 }
 
-.badge-light {
-  color: #58677c;
-  background: #F7F8FA;
+.badge {
+  background: var(--contrast-color);
 }
 
+.btn-outline-primary{
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
 .list-inline {
   padding-left: 0;
   list-style: none;
@@ -1497,7 +1550,7 @@ section,
 
 .list-inline-item:not(:last-child) {
   margin-right: 0.5rem;
-
+}
 
 
 /*----------------------------------------------------------
@@ -1511,14 +1564,31 @@ section,
   height: 100vh;
 }
 
-img {
+.img {
   max-width: 100%;
   max-height: 100%;
 }
 
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
+/* ── THEME TOGGLE ── */
+#themeToggle {
+  position: fixed;
+  right: 1.4rem;
+  bottom: 0.8rem;
+  z-index: 99999;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  transition: all 0.4s;
+  border: 1.5px solid var(--accent-color);
+  background: var(--background-color);
+  color: var(--accent-color);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#themeToggle:hover {
+  background-color: color-mix(in srgb, var(--contrast-color), transparent 20%);
+  color: var(--accent-color);
 }
