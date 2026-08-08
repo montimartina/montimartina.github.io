@@ -22,15 +22,15 @@
   --background-color: #232323;
   --default-color: #e8e5e5;
   --heading-color: #e8e5e5;
-  --accent-color: #20aef1;
+  --accent-color: #0563bb;
   --surface-color: #252525;
-  --contrast-color: #4f4f4f;
+  --contrast-color: #2e2d2d;
   --nav-color: #e8e5e5;  /* The default color of the main navmenu links */
-  --nav-hover-color: #20aef1; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #0563bb; /* Applied to main navmenu links when they are hovered over or active */
   --panel: #231f18;
   --text-success: #11af65;
   --text-warning: #c29010;
-  --muted: #2facd2;
+  --muted: #216aae;
   --border: rgba(200, 169, 110, 0.18);
   --card-bg: #231f18;
   --input-bg: rgba(255, 255, 255, 0.05);
