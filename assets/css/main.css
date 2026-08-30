@@ -30,6 +30,18 @@
   --panel: #231f18;
   --text-success: #11af65;
   --text-warning: #c29010;
+
+  --background-color: #202124; /* Colore di sfondo principale */
+  --default-color: #E8E5E5;
+  --heading-color: #A4D8FF;
+  --accent-color: #3da3f0;
+  --surface-color: #3d3d3d;
+  --contrast-color: #2e2d2d; /* Colore di contrasto per testo su superfici scure */
+  --nav-color: #E8E5E5;  /* The default color of the main navmenu links */
+  --nav-hover-color:#3da3f0; /* Applied to main navmenu links when they are hovered over or active */
+  --panel: #231f18;
+  --text-success: #11af65;
+  --text-warning: #c29010;
   --muted: #216aae;
   --border: rgba(200, 169, 110, 0.18);
   --card-bg: #231f18;
@@ -41,6 +53,7 @@
 }
 
 [data-theme="light"] {
+  
   --background-color: #f9f3f3; /* Background color for the entire website, including individual sections */
   --default-color: #333333; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #0563BB; /* Color for headings, subheadings and title throughout the website */
@@ -50,9 +63,21 @@
   --nav-color: #0563BB;  /* The default color of the main navmenu links */
   --nav-hover-color: #0563BB; /* Applied to main navmenu links when they are hovered over or active */
   --text-success: #059652;
-  --text-warning: #ffb703;
-  --muted: #A4D8FF;
-  --border: rgba(120, 90, 40, 0.15);
+  --text-warning: #ffb703; 
+
+  --background-color: #f5f5f5; /* Colore di sfondo principale */
+  --default-color: #202124; /* Colore del testo principale */
+  --heading-color: #0563BB; /* Colore per titoli e sottotitoli */
+  --accent-color: #3c7bb6; /* Colore di accento per pulsanti, link, ecc. */
+  --surface-color: #faf9f9; /* Colore per superfici come card o box */
+  --contrast-color: #b7cee5; /* Colore di contrasto per testo su superfici chiare */
+  --nav-color: #10375e; /* Colore dei link nel menu di navigazione */
+  --nav-hover-color: #0563BB; /* Colore dei link quando sono attivi o in hover */
+  --text-success: #059652; /* Colore per messaggi di successo */
+  --text-warning: #ffb703; /* Colore per messaggi di avviso */
+  --border: rgba(23, 50, 77, 0.671); /* Colore per bordi */
+
+  --muted: #0563BB
   --card-bg: #ffffff;
   --input-bg: #f5f0e8;
   --input-border: rgba(120, 90, 40, 0.2);
