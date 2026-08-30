@@ -19,14 +19,14 @@
 
 
 [data-theme="dark"] {
-  --background-color: #1E1E1E;
+  --background-color: #181818;
   --default-color: #E8E5E5;
   --heading-color: #A4D8FF;
   --accent-color: #3da3f0;
   --surface-color: #252525;
   --contrast-color: #2e2d2d;
   --nav-color: #E8E5E5;  /* The default color of the main navmenu links */
-  --nav-hover-color: #0563BB; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color:#3da3f0; /* Applied to main navmenu links when they are hovered over or active */
   --panel: #231f18;
   --text-success: #11af65;
   --text-warning: #c29010;
@@ -41,7 +41,7 @@
 }
 
 [data-theme="light"] {
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --background-color: #f9f3f3; /* Background color for the entire website, including individual sections */
   --default-color: #333333; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #0563BB; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #0563BB; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -178,7 +178,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  color: var(--default-color);
+  color: var(--surface-color);
   position: fixed;
   top: 0;
   left: 0;
@@ -292,18 +292,57 @@ h6 {
   padding: 0 5px 0 7px;
 }
 
+/* NAV ORIZZONTALE SU SCHERMI GRANDI */
 @media (min-width: 992px) {
-
-  .navmenu a,
-  .navmenu a:focus {
-    max-width: 56px;
+  .navmenu {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--background-color);
+    padding: 10px 20px;
   }
 
-  .navmenu a span,
-  .navmenu a:focus span {
-    display: none;
+  .index-page .main {
+    margin-left: 0 !important;
+  }
+
+  /* Togli il margine solo dopo la hero */
+  #about,
+  #hero,
+  #resume,
+  #contact,
+  #project {
+    margin-left: 0 !important;
+  }
+
+  .navmenu ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* o space-between */
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navmenu li {
+    margin: 0 10px;
+  }
+
+  .navmenu a {
+    max-width: none; /* annulla il limite dei 56px */
+    width: auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .navmenu a span {
+    display: inline-block; /* ri-mostro il testo */
   }
 }
+
 
 .navmenu a:hover,
 .navmenu .active,
@@ -322,7 +361,10 @@ h6 {
 .navmenu a:hover span,
 .navmenu li:hover>a span {
   display: block;
+
 }
+
+
 
 /*--------------------------------------------------------------
 # Global Footer
@@ -575,15 +617,10 @@ section,
   justify-content: center;
 }
 
-.hero img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
+.hero .row {
   height: 100%;
-  object-fit: cover;
-  z-index: 1;
 }
+
 
 .hero:before {
   content: "";
@@ -638,6 +675,10 @@ section,
 
   .hero p {
     font-size: 20px;
+  }
+
+  #hero img {
+    margin-top: 20px;
   }
 }
 
@@ -770,29 +811,27 @@ img.rounded-circle {
   margin-bottom: 20px;
 }
 
-.resume .resume-item {
-  padding: 0 0 20px 20px;
-  margin-top: -2px;
-  border-left: 2px solid var(--accent-color);
-  position: relative;
-}
-
-.resume .resume-item h4 {
+.timeline-content h4 {
   line-height: 18px;
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, var(--accent-color), transparent 20%);
   margin-bottom: 10px;
 }
 
-.resume .resume-item h5 {
+.timeline-content h5 {
   font-size: 16px;
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
   margin-bottom: 10px;
 }
+
+.timeline-content h6 {
+  color: var(--heading-color);
+}
+
 
 .resume .resume-item ul {
   padding-left: 20px;
@@ -806,17 +845,88 @@ img.rounded-circle {
   padding-bottom: 0;
 }
 
-.resume .resume-item::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50px;
-  left: -9px;
-  top: 0;
-  background: var(--background-color);
-  border: 2px solid var(--accent-color);
+
+/* Stile per gli elementi della timeline */
+.resume-item {
+  position: relative;
+  margin-bottom: 4rem;
+  padding: 1.5rem;
+  background-color: var(--surface-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2;
 }
+
+.resume-item p {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.timeline {
+  width: 100%;
+}
+
+.timeline-row {
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr; /* sinistra - centro - destra */
+  align-items: stretch;
+  margin-bottom: 60px;
+}
+
+/* Box esperienza */
+.timeline-content {
+  background: var(--surface-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.timeline-content.left {
+  text-align: right;
+}
+
+.timeline-content.right {
+  text-align: left;
+}
+
+/* Colonna centrale: cerchio + linea */
+.timeline-center {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cerchio */
+.timeline-circle {
+  width: 65px;                /* più grande */
+  height: 65px;
+  background: var(--surface-color);
+  border-radius: 50%;         /* cerchio perfetto */
+
+  border: 2px solid var(--accent-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--accent-color);
+  font-size: 24px;            /* icona più grande */
+  font-weight: 400;
+
+  z-index: 2;
+  margin-bottom: 20px;
+}
+
+/* Linea: prende tutta l’altezza del row */
+.timeline-line {
+  width: 3px;
+  background: var(--accent-color);
+  flex-grow: 1;
+  margin-top: -5px;
+  z-index: 1;
+}
+
 
 .card {
   background-color: var(--surface-color);
@@ -1152,6 +1262,10 @@ img.rounded-circle {
 --------------------------------------------------------------*/
 .contact .info-item+.info-item {
   margin-top: 40px;
+}
+
+.contact .info-item{
+  background: var(--surface-color);
 }
 
 .contact .info-item i {
@@ -1538,6 +1652,10 @@ img.rounded-circle {
   color: var(--accent-color);
 }
 
+.services .info-item{ 
+  background: var(--surface-color);
+}
+
 /*-----------*/
 
 .resume-skills-cat {
@@ -1618,3 +1736,35 @@ i.bi:hover {
   border-radius: 50% !important; /* Mantieni il cerchio */
   padding: 10px !important; /* Aggiungi spazio intorno all'icona */
 }
+
+/* HEADER STYLE */
+.page-header {
+  width: 100%;
+  height: 260px;
+  position: relative;
+  margin-top: 70px;
+  overflow: hidden;
+}
+
+
+/* Overlay identico alla HERO */
+.header-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Titolo */
+.header-title {
+  color: var(--accent-color);
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  z-index: 3;
+}
+
+
+
