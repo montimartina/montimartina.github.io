@@ -39,6 +39,15 @@
     <i class="header-toggle d-xl-none bi bi-list"></i>
     
     <nav id="navmenu" class="navmenu">
+      <div class="mobile-profile-block">
+        <a class="mobile-profile" href="#hero" aria-label="Torna alla Home">
+          <img class="theme-profile-image" src="assets/img/profile.jpg" data-original-src="assets/img/profile.jpg" alt="Martina Monti">
+        </a>
+        <div class="mobile-profile-caption">
+          <strong>Monti Martina</strong>
+          <span>Data Scientist &amp; Data Engineer</span>
+        </div>
+      </div>
       <ul>
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
         <li><a href="#about"><i class="bi bi-person navicon"></i><span>About Me</span></a></li>
@@ -67,6 +76,7 @@
           <div class="d-flex gap-3 mt-4">
             <a href="#about" class="btn btn-outline-light rounded-pill px-4 py-2 shadow-sm fs-6 text-primary">About Me</a>
             <a href="#project" class="btn btn-outline-light rounded-pill px-4 py-2 shadow-sm fs-6 text-primary ">My Project</a>
+            <a href="Martina_Monti_CV.pdf"  target="_blank" rel="noopener noreferrer" class="btn btn-outline-light rounded-pill px-4 py-2 shadow-sm fs-6 text-primary ">My CV</a>
           </div>
           <div class="mt-4">
             <span class="badge text-primary px-3 py-2 rounded-pill">Mathematics</span>
@@ -76,11 +86,17 @@
           </div>
         </div>
         
-
-        
         <!-- Immagine a destra -->
         <div class="col-lg-6 text-center" data-aos="fade-left">
-          <img src="assets/img/profile.jpg" alt="Martina Monti" class="img-fluid rounded-circle shadow-lg" style="max-width: 80%; border: 5px solid rgba(255, 255, 255, 0.2);">
+          <img src="assets/img/profile.jpg" data-original-src="assets/img/profile.jpg" alt="Martina Monti" class="theme-profile-image img-fluid rounded-circle shadow-lg" style="max-width: 80%; border: 5px solid rgba(255, 255, 255, 0.2);">
+          <div>
+            <p>I'm <span class="typed" data-typed-items="a mathematician, a researcher, a creative person, a dynamic person, ready to learn"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+            <!-- <div class="social-links"> -->
+                <a href="mailto:monti.martina96@gmail.com"><i class="fa-regular fa-envelope fa-xl" style="color: #0563BB;"></i></a>
+                
+                <a href="https://www.linkedin.com/in/mmonti1996/"><i class="fa-brands fa-linkedin fa-xl" style="color: #0563BB;"></i></a>
+              <!-- </div> -->
+          </div>
         </div>
       </div>
     </div>
@@ -116,28 +132,10 @@
             <p>
              After PhD I've decided to moved from Academia into the world of Data. 
              Passionate on problem solving and divulgation, I was looking for a career that would allow me to apply my analytical skills and creativity to real-world problems. 
-             Cerco una carriera in cui possa non solo risolvere problemi più concreti e attuali, ma permettere anche ai più di comprendere i dati e le loro implicazioni. Quindi trasformare problemi complessi intor driven solution accessibili a tutti 
             </p>
           </div>
         </div>
     
-        <div class="row text-dark justify-content-center mt-4">
-          <div class="content text-center" data-aos="fade-right">
-            <h2 class="text-dark"><i class="bi bi-person-circle me-2 text-primary"></i>Personal Information</h2>
-          </div>
-          <div class="col-lg-5">
-            <ul class="list-unstyled">
-              <li class="mb-2"><i class="bi bi-mortarboard-fill me-2"></i> <strong>Degree:</strong> <span>PhD in Mathematical Sciences</span></li>
-              <li class="mb-2"><i class="bi bi-globe me-2"></i> <strong>Spoken languages:</strong> <span>Italian, English, French</span></li>
-            </ul>
-          </div>
-          <div class="col-lg-5">
-            <ul class="list-unstyled">
-              <li class="mb-2"><i class="bi bi-envelope me-2"></i> <strong>Job Email:</strong> <span><a href="mailto:mart.monti@nexidigital.eu" class="text-decoration-none">mart.monti@nexidigital.eu</a></span></li>
-              <li class="mb-2"><i class="bi bi-envelope-fill me-2"></i> <strong>Personal Email:</strong> <span><a href="mailto:montimartina96@gmail.com" class="text-decoration-none">montimartina96@gmail.com</a></span></li>
-            </ul>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -151,7 +149,7 @@
     <section id="skills" class="skills section py-5">
       <div class="container section-title" data-aos="zoom-out">
         <h2>Data Analytics Skills</h2>
-        <p>Le università aprono le porte; la pratica quotidiana e la passione permettono di padroneggiare gli strumenti.</p>
+        <p>Universities open doors; daily practice and passion help you master the tools.</p>
       </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -241,14 +239,7 @@
             <div class="info-item border border-light-subtle p-4 rounded-4 h-100">
               <i class="bi bi-geo-alt fs-3 text-primary mb-2"></i>
               <h3>Job Address</h3>
-              <p class="small text-muted">Corso Sempione 57 - Milan (Italy)</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="info-item border border-light-subtle p-4 rounded-4 h-100" >
-              <i class="bi bi-envelope fs-3 text-primary mb-2"></i>
-              <h3>Job Email</h3>
-              <p class="small"><a href="mailto:mart.monti@nexidigital.eu">mart.monti@nexidigital.eu</a></p>
+              <p class="small text-muted">Milan (Italy)</p>
             </div>
           </div>
           <div class="col-md-4">
@@ -256,6 +247,13 @@
               <i class="bi bi-envelope-fill fs-3 text-primary mb-2"></i>
               <h3>Personal Email</h3>
               <p class="small"><a href="mailto:monti.martina96@gmail.com">monti.martina96@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="info-item border border-light-subtle p-4 rounded-4 h-100" >
+              <i class="fa-brands fa-linkedin fs-3 text-primary mb-2"></i>
+              <h3>Personal LinkedIn Profile</h3>
+              <p class="small"><a href="https://www.linkedin.com/in/mmonti1996/">Martina Monti</a></p>
             </div>
           </div>
         </div>
