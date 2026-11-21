@@ -236,12 +236,16 @@ function setTheme(t) {
   localStorage.setItem('csaq-theme', t);
   if (icon) icon.className = t === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
 
+  document.querySelectorAll('.theme-profile-image').forEach(img => {
+    img.src = t === 'dark' ? 'assets/img/dark-profile.jpg' : img.dataset.originalSrc;
+  });
+
   document.querySelectorAll('img').forEach(img => {
     const originalSrc = img.getAttribute('data-original-src');
     if (originalSrc) {
       if (originalSrc.includes('image-12')) {
         img.src = t === 'dark' ? 'assets/img/image-1.png' : originalSrc;
-      } else if (originalSrc.includes('profile.jpg')) {
+      } else if (originalSrc.includes('profile.jpg') && !img.classList.contains('theme-profile-image')) {
         img.src = t === 'dark' ? 'assets/img/new-profile.jpg' : originalSrc;
       }
     }
