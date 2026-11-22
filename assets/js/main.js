@@ -256,3 +256,4 @@ const themeToggle = document.getElementById('themeToggle');
 if (themeToggle) themeToggle.addEventListener('click', () =>
   setTheme(html.dataset.theme === 'dark' ? 'light' : 'dark')
 );
+
